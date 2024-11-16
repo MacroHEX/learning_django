@@ -1,18 +1,17 @@
 {
   "builds": [
     {
-      "src": "loginApp/wsgi.py",
-      "use": "@vercel/python",
+      "src": "learning_django/wsgi.py",
+      "use": "@ardnt/vercel-python-wsgi",
       "config": {
-        "maxLambdaSize": "15mb",
-        "runtime": "python3.9"
+        "maxLambdaSize": "15mb"
       }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "loginApp/wsgi.py"
+      "dest": "learning_django/wsgi.py"
     }
   ]
 }
